@@ -1,0 +1,46 @@
+<head>
+   <link rel="shortcut icon" href="/static/icon/cadastro.png" >
+</head>
+<div class="container" >
+    <a class="links" id="paracadastro"></a>
+    <a class="links" id="paralogin"></a>
+ 
+    <title>CADASTRO</title>
+    <div class="content">      
+      <!--FORMULÁRIO DE LOGIN-->
+      <div id="login">
+        <link rel="stylesheet" href="{{ url_for('static', filename='cadastro.css') }}"><br>  
+
+      <!--FORMULÁRIO DE CADASTRO-->
+      
+        <form method="post" action="cadastro"> 
+          <h1>Cadastro</h1> 
+          <p> 
+            <p><label><img src="/static/icon/login.png">
+            </label> <input title="LOGIN" type="text" name="username" placeholder="Nome" size="35" maxlength="10"   /><br></p>
+          </p>
+          
+          <p> 
+            <p><label><img src="/static/icon/senha.png">
+            </label> <input title="Senha padrao" type="password" name="password" placeholder="Senha" size="35" /><br></p>
+            
+          </p>
+          
+          <p> 
+            <p><label><img src="/static/icon/email.png">
+            </label> <input title="EMAIL" type="text" name="email" placeholder="Email" size="35" maxlength="50"   /><br></p>
+
+          </p>
+          
+          <p> 
+            <input type="submit" value="Cadastrar"/> 
+          </p>
+          
+          <p class="link">  
+            Já tem conta?
+            <a href="/login"> Ir para Login </a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div> 

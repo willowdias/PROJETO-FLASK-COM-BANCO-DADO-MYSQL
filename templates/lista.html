@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="/static/icon/cadastro.png" >
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='classalerta.css') }}">  
+    <meta charset="UTF-8">
+    <title>CLIENTES</title>
+    <script>
+      function mascaracpf(){
+        var cpf = document.getElementById("cpf")
+        if(cpf.value.length ==3 || cpf.value.length==7){
+          cpf.value += "."
+        } else if(cpf.value.length==11){
+          cpf.value += "-"
+        }
+      }
+    
+    </script>
+    
+     <script type="text/javascript">
+        function show_alert() {
+            alert("CLIENTE EXCLUIDO")
+        }
+      
+    </script>
+  
+</head>
+<body>
+  <center>
+      
+
+      {% with msg = get_flashed_messages() %}
+      {% if msg %}
+      <ul id="msg" class="list_unstyled">
+      {% for message in msg %}
+      <label class="messagem-aviso">  {{ message }}</label>
+      {% endfor %}
+      </ul>
+      {% endif %}
+      {% endwith %}
+     
+    
+  </center>
+    <form method="POST" action="/lista"onsubmit="return valida_form()" >
+      <div>
+    <p>
+    <input title="NOME" type="text" name="nome" placeholder="NOME" size="35" maxlength="50"  />
+    <input title="ENDEREÇO" type="text" name="end" placeholder="ENDEREÇO" size="35" maxlength="50"/> </p></br>
+    
+    <input title="CPF"  type="text" name="cpf" id="cpf" pattern="^(\d{3}\.\d{3}\.\d{3}-\d{2})|(\d{11})$"placeholder="CPF" size="20" maxlength="14" onkeyup="mascaracpf()"/>
+    <input title="CELULAR" type="numero" name="numero" placeholder="CELULAR" size="35" maxlength="14"/> </p></br>
+    <input title="CIDADE" type="text" name="cidade" placeholder="CIDADE" size="20" maxlength="50"   />
+    <input title="ESTADO" type="text" name="estado" placeholder="UF" size="2" maxlength="2"   /></br>
+    <p><div>
+        <p><strongf style="color:white;"> OBS<strong></p>
+        <textarea name="tx_mensagem" cols="100" rows="8"
+        class="formbutton" id="tx_mensagem" input ></textarea>
+    </div></p>
+    </div>
+    
+    <button class='salvar' type='submit'>SALVAR</button>
+    <button class='cancelar' type='submit'action="/foo">CANCELAR</button>
+    
+    <labe>{{msg}}</label>
+
+    <center>
+    <h1 style="font: 87 32pt Arial Black ;color:white; background-color:Black;">LISTA CLIENTE</h1>
+    </center>
+    <select name="comp_select" class="cbPais"id="cbPais">
+    <option></option>
+    <option>ID</option>
+    <option>NOME</option>
+    <option>CODIGO</option>
+    {% for o in data %}
+    <option value="{{ o.name }}">{{ o.name }}</option>
+      {% endfor %}
+    </select>
+    </form>
+      
+    
+    <table class="">
+        <p><tr class="grade-tabela">
+      
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Endereço</th>
+            <th>Cpf</th>
+            <th>Cidade</th>
+            <th>Estado</th>
+            <th>Numero</th>
+            <th>Excluir</th>
+            <th>Atualizar</th>
+            <th style="width:100px">html</th>
+         <th><input size="12" type="text" placeholder="BUSCAR"  /input>
+        </tr></p>
+            <p><tr>
+            {% for funcionario in funcionarios %}
+                <td class="id-cliente">{{ funcionario.id }}<input  class="checkboxbuscar" type="checkbox"><i></i></td>
+                <td>{{ funcionario.nome }}</td>
+                <td>{{ funcionario.endereco }}</td>
+                <td>{{ funcionario.cpf}}</td>
+                <td>{{ funcionario.cidade }}</td>
+                <td>{{ funcionario.estado }}</td>
+                
+                <td style="width:100px">{{ funcionario.numero }}</td>
+                <td><a style=" color:red;"href="/excluir/{{ funcionario.id }}"  onclick="show_alert()">Excluir <img src="/static/icon/excluir.png"></a></td>
+                <td><a href="/atualizar/{{ funcionario._id }}">Atualizar <img src="/static/icon/atualizar.png"></a></td>
+            </tr></p>
+            
+        {% endfor %}
+    </table>
+    
+    <p class="link">  
+         
+      <a href="/login" class="link" value="Cadastro" type="submit"  style="color: White">VOLTA LOGIN  </a></p> 
+   
+    <section>
+        <marquee behavior ="" direction="right">
+          <p>TELA CLIENTES</p>
+        </marque>   
+    </section>
+    </form>
+    <form>
+    
+</body>
+</html>

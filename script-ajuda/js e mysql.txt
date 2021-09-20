@@ -1,0 +1,20 @@
+<script>
+      function mascaracpf(){
+        var cpf = document.getElementById("cpfvalidar")
+        if(cpf.value.length ==3 || cpf.value.length==7){
+          cpf.value += "."
+        } else if(cpf.value.length==11){
+          cpf.value += "-"
+        }
+      }
+    </script>
+
+name="cpfvalidar"
+
+<td style="width:100px">{{ funcionario.numero }}</td>
+SELECT * FROM cliente
+
+	
+ALTER TABLE cliente DROP COLUMN numero ;
+
+ALTER TABLE cliente ADD COLUMN numero int(11);

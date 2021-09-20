@@ -1,0 +1,267 @@
+body { 
+  
+  color: rgb(14, 7, 7);
+  max-width: 
+  960px; margin: 
+  0 auto; 
+  background: url("/static/fundo/fundo11.jpeg") no-repeat   ; 
+  background-color:rgb(122, 65, 65);
+  background-size: 100% ;
+  position: relative;
+}
+
+input{ 
+  opacity : none; 
+  background: #d4cece ;
+  font: 87 14pt "Arial Black";
+border-radius: 2%;
+border: solid 1px;
+border-color:#b4b4b4;
+border-width: 2px;
+color:white
+
+  }
+input:focus {
+  font: 87 14pt "Arial Black";
+  color:white;
+  border-radius: 1PX;
+  border: solid 1px;
+  border-color:#b4b4b4;
+  background-color: rgb(180, 180, 180);
+  border-width: 2px;}
+table {
+    font-family: arial;
+    border-collapse: collapse;
+    border-color: solid #af128d;
+    
+    
+  }
+  th{
+    width: 150px;
+  }
+  td{
+    color: black;
+    background-color: #d4cece;
+    border: 1px solid;
+    text-align: left;
+    padding: 12px;
+   
+  }
+  .link{
+    color:aqua;
+    text-align: RIGHT;
+    padding: 15px;
+  }
+  .grade-tabela{
+    width:150px;
+    height:50px;
+    color:white;
+    border: 1px solid;
+    text-align: center;
+    position: relative;
+    background: -webkit-linear-gradient(left,#21D4FD,#B721FF,rgba(147,184,189,25) 100%); 
+   
+
+    }
+  
+
+  label{ 
+    color:rgb(211, 211, 211);
+    font: 14pt "Impact";
+    font-weight: normal;
+
+  }
+  labellogin{
+    font: 20pt "Impact";
+    color:rgb(211, 211, 211);
+  }
+  .btn-primary{
+    margin-top: 1px; margin-left: -150px; margin-right: 15px; 
+    width: 200px;
+    height: 40px;
+    border:none;
+    font-family: Trebuchet MS;
+    font-size:20px;
+    color:white;
+    font-weight: bold;
+    border-left:1px solid white;
+    border-right: 1px solid white;
+    background-color:rgba(255,255,255,0.2);
+    }
+    .btn-primary:hover{
+    text-decoration:underline;
+    background-color:rgba(255,255,255,0.6);
+    }
+    
+    
+    .button36{
+      position: absolute;
+      width: 150px;
+      height: 40px;
+      border:none;
+      font-family: Trebuchet MS;
+      font-size:20px;
+      color:white;
+      font-weight: bold;
+      border-left:15px solid transparent ;
+      border-right: 15px solid transparent;
+      border-top-width: 60px;
+      background-color:rgba(255,255,255,0.2);
+     
+    }
+    .button36:hover{
+      text-decoration:underline;
+      background-color:rgba(255,255,255,0.6);
+      }
+
+      .form-group{
+        opacity : 0.6;
+      border-top:15px   ;
+      border-left:15px ;
+      border:2px solid;
+      border-radius: 180px;
+      border-color: black;
+
+      background-color:rgba(255,255,255,0.2);
+      background: url("/static/test.jpg") no-repeat   ;
+       
+      width: 870px;
+      height: 600px;
+      position: absolute;
+    }
+    .form-group:hover{
+      text-decoration:underline;
+      background: url("/static/fundo/fundo11.jpeg") no-repeat   ;
+      opacity : inherit;
+    }
+
+    /*--.divprediocima {
+      position:absolute;
+      background: transparent;
+      opacity : 0.5; 
+      padding-bottom:30%;
+  width: 50%;
+  height: 0px;
+    left:50%;
+		top:50%;
+		margin-left:-1000px;
+		margin-top:-30px;
+    animation-name: prediocima;
+      animation-duration: 5s;
+      animation-delay: 4s;
+      animation-iteration-count: infinite;
+     
+      }
+      
+      @keyframes prediocima {
+        
+        35%   {background: url("/static/fundo/test.jpg")no-repeat ;}
+        15%   {background: url("/static/fundo/fundo11.jpeg") no-repeat    ;}
+        56%  {background: url("/static/fundo/img.png") no-repeat    ;}
+      
+      
+      }--*/
+     .progress{
+       border-radius:15px;
+       border: 1px solid transparent;
+     }
+
+     .cbPais{
+      width:350px;
+      text-align: center;
+      background-color: rgb(255, 255, 255,150);
+      border-radius: 5px;
+      border: 2px solid rgb(27, 29, 35);
+      padding: 5px;
+      padding-left: 10px;
+    }
+    .cbPais:hover{
+      border: 2px solid rgb(64, 71, 88);
+      color: rgb(85, 255, 0);
+    }
+    select:not([multiple]){
+     
+      font-family: Trebuchet MS;
+      font-size:14px;
+      color: rgb(85, 255, 0);
+      background-color: rgb(27, 29, 35);
+      padding: 10px;
+      user-select: text;
+    }
+    .alertalert-success{
+      width: 50%;
+      height: 35px;
+      color:white;
+      font-size: 25px;
+      text-align: left;
+      background-color:transparent;
+      position:relative;
+    }
+    .alerta-login{
+      width: 350px;
+      height: 25px;
+      color: #af128d;
+      font-size: 25px;
+      text-align: center;
+      background-color: #f6f8f7;
+    }
+    
+    section{
+      width:100%;
+      height: 100px;;
+      background-image:linear-gradient(to left, #FFE53B,#FF5ACD);
+      height:75px;
+     
+    }
+    section p{
+      font-size: 22px;
+      color:white;
+      padding: 6px 15;
+      text-align: left;
+    }
+    .testo{
+      font-size: 22px;
+      color:white;
+      padding: 15px 0;
+     
+     
+    }
+    .salvar{
+      border: 0;
+      width: 200px;
+      height: 50px;
+      margin: 15px;
+      border-radius: 4px;
+    }
+    .cancelar{
+
+      border: 0;
+      width: 200px;
+      height: 50px;
+      margin: 15px;
+      border-radius: 4px;
+    }
+    .id-cliente{
+      color:white;
+      border: 1px solid;
+      padding: 15px;
+     background-image:linear-gradient(to bottom,#F58C02,#F7AD4C); 
+    
+    }
+    .checkboxbuscar {
+      padding:0.125em;
+      border-width:0.125em;
+      border-radius:50%;
+      background:#FFF;
+     }
+     .messagem-aviso{
+       background-color:black;
+       width:150px;
+       font-size:29px;
+       border: #f6f8f7 solid;
+       border-radius: 5px;
+     }
+     .foo{
+       width:50px;
+       height:50px;
+     }
